@@ -3,6 +3,7 @@ package org.example;
 
 import org.example.Chaises.MainChaises;
 import org.example.ComptesBancaire.mainCompte;
+import org.example.Employe.MainEmploye;
 import org.example.Person.MainPerson;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -11,7 +12,8 @@ public class Main {
     public static void main(String[] args) {
         //MainChaises.main();
         //mainCompte.main();
-        MainPerson.main();
+        //MainPerson.main();
+        MainEmploye.main();
     }
 
 
