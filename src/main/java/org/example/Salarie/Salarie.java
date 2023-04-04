@@ -8,6 +8,9 @@ public class Salarie {
     public String Nom;
     public double Salaire;
 
+    public Salarie() {
+    }
+
     public Salarie(String nom, double salaire) {
         Nom = nom;
         Salaire = salaire;
@@ -20,5 +23,9 @@ public class Salarie {
 
     public static void changeCpt (int value){
         cptSalarie = value;
+    }
+
+    public void calculSalaire (){
+
     }
 }
