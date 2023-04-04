@@ -1,6 +1,4 @@
-package org.example.Classes;
-
-import org.example.Classes.Chaises;
+package org.example.Chaises;
 
 public class MainChaises {
 
