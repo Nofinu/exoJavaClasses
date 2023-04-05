@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainSalarie {
     public static void main() {
-        Salarie[] tab = {new Salarie("toto", 2000), new Salarie("titi", 2200), new Salarie("tata", 3000), new Salarie("tutu", 2500),new Commercial("com1",1800,54000,10)};
+        Salarie[] tab = {new Salarie("toto", 2000,18,"rue de la rue",18500), new Salarie("titi", 2200,18,"rue de la rue",18500), new Salarie("tata", 3000,18,"rue de la rue",18500), new Salarie("tutu", 2500,18,"rue de la rue",18500),new Commercial("com1",1800,18,"rue de la rue",18500,54000,10)};
 
         Scanner s = new Scanner(System.in);
         int entry = 0;
@@ -68,18 +68,27 @@ public class MainSalarie {
     public  static Salarie[] addEmploye(Salarie[] tab, int type){
         String nom;
         double salaire;
+        int numero;
+        String rue;
+        int codePostal;
         Scanner s = new Scanner(System.in);
         System.out.println("entre le nom de l'employé :");
         nom = s.next();
         System.out.println("entrer le salaire de l'employé : ");
         salaire = s.nextDouble();
+        System.out.println("entrer le numero de de l'adresse :");
+        numero = s.nextInt();
+        System.out.println("entrer la rue :");
+        rue = s.next();
+        System.out.println("entrer le code Postal");
+        codePostal = s.nextInt();
 
         Salarie[] tabActualiser = new Salarie[tab.length+1];
         for (int i = 0; i <tab.length ; i++) {
             tabActualiser[i]=tab[i];
         }
         if(type == 1){
-            tabActualiser[tab.length] = new Salarie(nom,salaire);
+            tabActualiser[tab.length] = new Salarie(nom,salaire,numero,rue,codePostal);
         }
         else{
             double Ca;
@@ -88,7 +97,7 @@ public class MainSalarie {
             Ca = s.nextDouble();
             System.out.println("entrer la commition de l'employé : ");
             commistion = s.nextInt();
-            tabActualiser[tab.length] = new Commercial(nom,salaire,Ca,commistion);
+            tabActualiser[tab.length] = new Commercial(nom,salaire,numero,rue,codePostal,Ca,commistion);
         }
 
         return tabActualiser;

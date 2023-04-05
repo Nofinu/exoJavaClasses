@@ -9,8 +9,8 @@ public class Commercial extends Salarie implements CalculSalaire{
     public Commercial() {
     }
 
-    public Commercial(String nom, double salaire, double chiffreDaffaire, int commission) {
-        super(nom, salaire);
+    public Commercial(String nom, double salaire,int numero ,String rue,int codePostal, double chiffreDaffaire, int commission) {
+        super(nom, salaire,numero,rue,codePostal);
         ChiffreDaffaire = chiffreDaffaire;
         this.commission = commission;
     }
