@@ -25,7 +25,4 @@ public class Salarie {
         cptSalarie = value;
     }
 
-    public void calculSalaire (){
-
-    }
 }

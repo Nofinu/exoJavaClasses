@@ -1,6 +1,6 @@
 package org.example.Salarie;
 
-public class Commercial extends Salarie{
+public class Commercial extends Salarie implements CalculSalaire{
     private double ChiffreDaffaire;
     private int commission;
 
@@ -31,12 +31,13 @@ public class Commercial extends Salarie{
         this.commission = commission;
     }
 
-    @Override
-    public void calculSalaire() {
-        this.Salaire += commission;
-    }
 
     public void seDeplacer(){
         distance += 1000;
+    }
+
+    @Override
+    public void calculSalaire() {
+        this.Salaire += (commission/100)*ChiffreDaffaire;
     }
 }
